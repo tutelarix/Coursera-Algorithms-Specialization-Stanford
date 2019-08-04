@@ -116,7 +116,7 @@ void compareHashTables() {
 #define T_LOW -10000
 #define T_HIGH 10000
 
-long long int array[SIZE];
+long long int array_w[SIZE];
 
 void task() {
     ifstream dataFile;
@@ -129,7 +129,7 @@ void task() {
     if(dataFile.is_open()) {
         while(!dataFile.eof()) {
             dataFile >> value;
-            array[index] = value;
+            array_w[index] = value;
             index++;
 
             hashTable.insert(value, 0);
@@ -146,8 +146,8 @@ void task() {
     unsigned int count = 0;
     for(int i = T_LOW; i<=T_HIGH; ++i) {
         for(int j = 0; j<SIZE; ++j) {
-            long long int findValue = i-array[j];
-            if(findValue == array[j]) continue;
+            long long int findValue = i - array_w[j];
+            if(findValue == array_w[j]) continue;
             short getValue;
             if(hashTable.lookup(findValue, getValue)) {
                 count++;
