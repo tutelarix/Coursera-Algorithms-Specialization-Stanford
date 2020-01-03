@@ -37,7 +37,7 @@ inline bool Comp2 (const Job & left, const Job & right) {
 int main()
 {
     ifstream dataFile;
-    dataFile.open("jobs.txt");
+    dataFile.open("../jobs.txt");
 
     list<Job> jobs;
 

@@ -139,7 +139,7 @@ void processVertex(Vertex & vertex){
 
 int main() {
     ifstream dataFile;
-    dataFile.open("edges.txt");
+    dataFile.open("../edges.txt");
 
 
     int nodesNumber;
